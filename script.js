@@ -36,7 +36,8 @@ let users = {
        {'first_name' : 'Gordon', 'last_name' : 'Poe'}
     ]
  };
-
+ //comento este codigo porque fue el primer intento 
+/*
 function numCaract(arr,param){
     let count = 0;
     console.log(param);
@@ -51,3 +52,26 @@ for (let i=0; i<arr.length; i++){
 }
 numCaract(users.employees, "EMPLOYEES");
 numCaract(users.managers, "MANAGERS");
+*/
+
+function contar(users){
+    let count=0;
+    console.log("employees")
+    for(let i=0; i<users.employees.length;i++){
+       
+        let first = users.employees[i].first_name.length;
+        let last = users.employees[i].last_name.length;
+        let total=first + last;
+        console.log(i+1 + " - " + users.employees[i].last_name + " , " + users.employees[i].first_name + " - " + total);
+    }
+    console.log("managers")
+    for(let i=0; i<users.managers.length;i++){
+       
+        let first = users.managers[i].first_name.length;
+        let last = users.managers[i].last_name.length;
+        let total=first + last;
+        console.log(i+1 + " - " + users.managers[i].last_name + " , " + users.managers[i].first_name + " - " + total);
+    }
+}
+
+contar(users);
